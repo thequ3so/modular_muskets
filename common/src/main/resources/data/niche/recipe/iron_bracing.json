@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": "minecraft:iron_ingot",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "MSM"
+  ],
+  "result": {
+    "id": "niche:iron_bracing",
+    "count": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:display_context",
+    "cases": [
+      {
+        "when": ["gui", "ground", "fixed", "on_shelf", "head"],
+        "model": {
+          "type": "minecraft:special",
+          "base": "niche:item/musket",
+          "model": { "type": "niche:modular_weapon", "layers": "icon" }
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:special",
+      "base": "niche:item/musket_in_hand",
+      "model": { "type": "niche:modular_weapon", "layers": "weapon" }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "niche:craft_barrel",
+  "display": {
+    "icon": {
+      "id": "niche:musket"
+    },
+    "title": {
+      "text": "Locked and Loaded"
+    },
+    "description": {
+      "text": "Assemble a complete musket at a Musket Station"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "musket": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "niche:musket"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "musket"
+    ]
+  ]
+}

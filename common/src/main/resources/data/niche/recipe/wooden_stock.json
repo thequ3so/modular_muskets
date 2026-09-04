@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "P": "#minecraft:planks",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "SP",
+    "PP"
+  ],
+  "result": {
+    "id": "niche:wooden_stock",
+    "count": 1
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "niche:assemble_musket",
+  "display": {
+    "icon": {
+      "id": "niche:shulker_barrel"
+    },
+    "title": {
+      "text": "End of the Line"
+    },
+    "description": {
+      "text": "Recover a Shulker Barrel from an End City"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "shulker": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "niche:shulker_barrel"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "shulker"
+    ]
+  ]
+}

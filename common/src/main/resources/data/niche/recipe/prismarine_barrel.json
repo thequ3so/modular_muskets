@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "niche:wooden_barrel",
+    "minecraft:prismarine_shard"
+  ],
+  "result": {
+    "id": "niche:prismarine_barrel",
+    "count": 1
+  }
+}

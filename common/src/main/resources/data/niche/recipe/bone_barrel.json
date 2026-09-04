@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "niche:wooden_barrel",
+    "minecraft:bone"
+  ],
+  "result": {
+    "id": "niche:bone_barrel",
+    "count": 1
+  }
+}

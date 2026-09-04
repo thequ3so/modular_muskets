@@ -1,0 +1,68 @@
+{
+  "itemGroup.niche": "Modular Muskets",
+
+  "item.niche.musket": "Musket",
+  "item.niche.musket_ball": "Musket Ball",
+
+  "block.niche.weapon_station": "Musket Station",
+  "container.niche.weapon_station": "Musket Station",
+
+  "item.niche.wooden_barrel": "Wooden Barrel",
+  "item.niche.bone_barrel": "Bone Barrel",
+  "item.niche.resin_barrel": "Resin Barrel",
+  "item.niche.blaze_barrel": "Blaze Barrel",
+  "item.niche.breeze_barrel": "Breeze Barrel",
+  "item.niche.prismarine_barrel": "Prismarine Barrel",
+  "item.niche.echo_barrel": "Echo Barrel",
+  "item.niche.shulker_barrel": "Shulker Barrel",
+
+  "item.niche.wooden_stock": "Wooden Stock",
+  "item.niche.quartz_stock": "Quartz Stock",
+  "item.niche.padded_stock": "Padded Stock",
+  "item.niche.amethyst_stock": "Amethyst Stock",
+  "item.niche.emerald_stock": "Emerald Stock",
+  "item.niche.lapis_stock": "Lapis Stock",
+
+  "item.niche.copper_bracing": "Copper Bracing",
+  "item.niche.iron_bracing": "Iron Bracing",
+  "item.niche.golden_bracing": "Golden Bracing",
+  "item.niche.diamond_bracing": "Diamond Bracing",
+  "item.niche.netherite_bracing": "Netherite Bracing",
+
+  "niche.component_type.barrel": "Barrel",
+  "niche.component_type.stock": "Stock",
+  "niche.component_type.bracing": "Bracing",
+  "niche.component_type.augment": "Augment",
+
+  "tooltip.niche.augment.slot": "Augment (optional)",
+  "tooltip.niche.augment.hint": "Slot a special item for an effect:",
+  "tooltip.niche.station.empty": "Add components, or place a musket here",
+  "tooltip.niche.station.missing": "Still needed:",
+  "tooltip.niche.part.slot": "Slot: %s",
+  "tooltip.niche.weapon.loaded": "Loaded",
+  "tooltip.niche.weapon.unloaded": "Unloaded",
+  "tooltip.niche.weapon.hint": "Sneak to aim • hold to reload, click to fire",
+  "tooltip.niche.weapon.details": "Hold Shift for details",
+  "tooltip.niche.weapon.components": "Components:",
+  "tooltip.niche.weapon.abilities": "Abilities:",
+  "tooltip.niche.stat.damage": "Damage",
+  "tooltip.niche.stat.velocity": "Velocity",
+  "tooltip.niche.stat.accuracy": "Accuracy",
+  "tooltip.niche.stat.reload": "Reload",
+  "tooltip.niche.stat.magazine": "Magazine",
+  "tooltip.niche.stat.aim_speed": "Aim Speed",
+  "tooltip.niche.stat.stability": "Stability",
+
+  "toast.niche.first_musket.title": "Musket in hand",
+  "toast.niche.first_musket.desc": "Sneak to aim • Hold to reload • Click to fire",
+
+  "ability.niche.incendiary": "Incendiary",
+  "ability.niche.knockback": "Knockback",
+  "ability.niche.piercing": "Piercing",
+  "ability.niche.glowing": "Glowing",
+  "ability.niche.ricochet": "Ricochet",
+  "ability.niche.sonic": "Sonic",
+  "ability.niche.sticky": "Sticky",
+  "ability.niche.repeater": "Repeater",
+  "ability.niche.frugal": "Frugal"
+}

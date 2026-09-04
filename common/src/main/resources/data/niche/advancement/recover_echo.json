@@ -1,0 +1,35 @@
+{
+  "parent": "niche:assemble_musket",
+  "display": {
+    "icon": {
+      "id": "niche:echo_barrel"
+    },
+    "title": {
+      "text": "Whispers of the Deep"
+    },
+    "description": {
+      "text": "Recover an Echo Barrel from an Ancient City"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "echo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "niche:echo_barrel"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "echo"
+    ]
+  ]
+}

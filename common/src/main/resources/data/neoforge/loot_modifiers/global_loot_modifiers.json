@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "entries": [
+    "niche:ancient_city",
+    "niche:bastion",
+    "niche:buried_treasure",
+    "niche:desert_pyramid",
+    "niche:dungeon",
+    "niche:end_city",
+    "niche:jungle_temple",
+    "niche:mineshaft",
+    "niche:nether_bridge",
+    "niche:pillager_outpost",
+    "niche:shipwreck",
+    "niche:stronghold",
+    "niche:trial_chambers"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "P": "#minecraft:planks"
+  },
+  "pattern": [
+    "III",
+    "PPP",
+    "PPP"
+  ],
+  "result": {
+    "id": "niche:weapon_station",
+    "count": 1
+  }
+}

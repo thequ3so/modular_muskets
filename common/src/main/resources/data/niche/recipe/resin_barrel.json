@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "niche:wooden_barrel",
+    "minecraft:resin_clump"
+  ],
+  "result": {
+    "id": "niche:resin_barrel",
+    "count": 1
+  }
+}

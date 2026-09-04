@@ -1,0 +1,44 @@
+{
+  "parent": "niche:root",
+  "display": {
+    "icon": {
+      "id": "niche:blaze_barrel"
+    },
+    "title": {
+      "text": "Barrel of Fun"
+    },
+    "description": {
+      "text": "Craft or find any musket barrel"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "barrel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "niche:wooden_barrel",
+              "niche:bone_barrel",
+              "niche:resin_barrel",
+              "niche:blaze_barrel",
+              "niche:breeze_barrel",
+              "niche:prismarine_barrel",
+              "niche:echo_barrel",
+              "niche:shulker_barrel"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "barrel"
+    ]
+  ]
+}

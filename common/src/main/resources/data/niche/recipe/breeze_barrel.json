@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "niche:wooden_barrel",
+    "minecraft:breeze_rod"
+  ],
+  "result": {
+    "id": "niche:breeze_barrel",
+    "count": 1
+  }
+}

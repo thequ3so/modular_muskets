@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "niche:musket"
+    },
+    "title": {
+      "text": "Modular Muskets"
+    },
+    "description": {
+      "text": "Craft a musket ball to begin"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png"
+  },
+  "criteria": {
+    "ammo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "niche:musket_ball"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ammo"
+    ]
+  ]
+}

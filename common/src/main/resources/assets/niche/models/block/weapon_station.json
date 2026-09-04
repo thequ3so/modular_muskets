@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "up": "niche:block/weapon_station_top",
+    "down": "niche:block/weapon_station_bottom",
+    "north": "niche:block/weapon_station_side",
+    "south": "niche:block/weapon_station_side",
+    "east": "niche:block/weapon_station_side",
+    "west": "niche:block/weapon_station_side",
+    "particle": "niche:block/weapon_station_side"
+  }
+}

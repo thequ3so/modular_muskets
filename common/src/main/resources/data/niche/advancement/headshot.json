@@ -1,0 +1,28 @@
+{
+  "parent": "niche:assemble_musket",
+  "display": {
+    "icon": {
+      "id": "niche:musket_ball"
+    },
+    "title": {
+      "text": "Bullseye"
+    },
+    "description": {
+      "text": "Land a headshot with a musket"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "headshot": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "headshot"
+    ]
+  ]
+}
