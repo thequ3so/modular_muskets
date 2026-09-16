@@ -1,0 +1,68 @@
+{
+  "itemGroup.niche": "燧發槍 Modular Muskets",
+
+  "item.niche.musket": "燧發槍",
+  "item.niche.musket_ball": "燧發槍彈",
+
+  "block.niche.weapon_station": "燧發槍工作台",
+  "container.niche.weapon_station": "燧發槍工作台",
+
+  "item.niche.wooden_barrel": "木製槍管",
+  "item.niche.bone_barrel": "骨製槍管",
+  "item.niche.resin_barrel": "樹脂槍管",
+  "item.niche.blaze_barrel": "烈焰槍管",
+  "item.niche.breeze_barrel": "旋風槍管",
+  "item.niche.prismarine_barrel": "海晶石槍管",
+  "item.niche.echo_barrel": "回聲槍管",
+  "item.niche.shulker_barrel": "界伏槍管",
+
+  "item.niche.wooden_stock": "木製槍托",
+  "item.niche.quartz_stock": "石英槍托",
+  "item.niche.padded_stock": "加厚槍托",
+  "item.niche.amethyst_stock": "紫水晶槍托",
+  "item.niche.emerald_stock": "綠寶石槍托",
+  "item.niche.lapis_stock": "青金石槍托",
+
+  "item.niche.copper_bracing": "銅製支架",
+  "item.niche.iron_bracing": "鐵製支架",
+  "item.niche.golden_bracing": "金製支架",
+  "item.niche.diamond_bracing": "鑽石支架",
+  "item.niche.netherite_bracing": "獄髓支架",
+
+  "niche.component_type.barrel": "槍管",
+  "niche.component_type.stock": "槍托",
+  "niche.component_type.bracing": "支架",
+  "niche.component_type.augment": "增強配件",
+
+  "tooltip.niche.augment.slot": "增強配件 (選配)",
+  "tooltip.niche.augment.hint": "鑲嵌特殊物品以獲得效果:",
+  "tooltip.niche.station.empty": "新增組件，或在此處放入燧發槍",
+  "tooltip.niche.station.missing": "尚缺:",
+  "tooltip.niche.part.slot": "欄位: %s",
+  "tooltip.niche.weapon.loaded": "已上膛",
+  "tooltip.niche.weapon.unloaded": "未上膛",
+  "tooltip.niche.weapon.hint": "蹲下以瞄準 • 按住以重新裝彈，按下左鍵以發射",
+  "tooltip.niche.weapon.details": "長按 Shift 查看詳情",
+  "tooltip.niche.weapon.components": "組件:",
+  "tooltip.niche.weapon.abilities": "武器技能:",
+  "tooltip.niche.stat.damage": "傷害",
+  "tooltip.niche.stat.velocity": "子彈初速",
+  "tooltip.niche.stat.accuracy": "精準度",
+  "tooltip.niche.stat.reload": "換彈",
+  "tooltip.niche.stat.magazine": "裝彈量",
+  "tooltip.niche.stat.aim_speed": "瞄準速度",
+  "tooltip.niche.stat.stability": "穩定性",
+
+  "toast.niche.first_musket.title": "手持燧發槍",
+  "toast.niche.first_musket.desc": "蹲下以瞄準 • 按住以重新裝彈 • 點擊以發射",
+
+  "ability.niche.incendiary": "燃燒",
+  "ability.niche.knockback": "擊退",
+  "ability.niche.piercing": "穿透",
+  "ability.niche.glowing": "光輝之箭",
+  "ability.niche.ricochet": "跳彈",
+  "ability.niche.sonic": "音波",
+  "ability.niche.sticky": "緩慢",
+  "ability.niche.repeater": "連發",
+  "ability.niche.frugal": "節約"
+}

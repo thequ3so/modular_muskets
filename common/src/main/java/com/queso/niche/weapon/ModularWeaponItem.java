@@ -10,6 +10,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -121,6 +122,7 @@ public class ModularWeaponItem extends ProjectileWeaponItem {
             if (level instanceof ServerLevel serverLevel) {
                 fire(serverLevel, player, hand, stack);
             } else {
+                predictFire(stack);
                 AimClient.addRecoil(effectiveRecoil(stack));
             }
             return InteractionResult.CONSUME;
@@ -209,6 +211,21 @@ public class ModularWeaponItem extends ProjectileWeaponItem {
         }
     }
 
+    private static void predictFire(ItemStack stack) {
+        List<ItemStack> chamber = new ArrayList<>(
+                stack.getOrDefault(ModDataComponents.LOADED_AMMO, ChargedProjectiles.EMPTY).itemCopies());
+        if (chamber.isEmpty()) {
+            return;
+        }
+        chamber.removeFirst();
+        if (chamber.isEmpty()) {
+            stack.set(ModDataComponents.LOADED_AMMO, ChargedProjectiles.EMPTY);
+            setModelLoaded(stack, false);
+        } else {
+            stack.set(ModDataComponents.LOADED_AMMO, ChargedProjectiles.ofNonEmpty(chamber));
+        }
+    }
+
     private void fire(ServerLevel level, Player player, InteractionHand hand, ItemStack stack) {
         ChargedProjectiles loaded = stack.getOrDefault(ModDataComponents.LOADED_AMMO, ChargedProjectiles.EMPTY);
         if (loaded.isEmpty()) {
@@ -266,6 +283,9 @@ public class ModularWeaponItem extends ProjectileWeaponItem {
         if (frugal) {
             level.playSound(null, player.getX(), player.getY(), player.getZ(),
                     SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.PLAYERS, 0.5F, 1.6F);
+            if (player instanceof ServerPlayer serverPlayer) {
+                serverPlayer.inventoryMenu.sendAllDataToRemote();
+            }
         }
         WeaponSound barrelSound = build.fireSound();
         if (barrelSound != null) {

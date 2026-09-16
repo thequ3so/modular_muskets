@@ -66,9 +66,9 @@ public final class ModItems {
     static {
         barrel("wooden_barrel").stats(MaterialTier.WOODEN.stats(BARREL)).register();
         stock("wooden_stock").stats(MaterialTier.WOODEN.stats(STOCK)).register();
-        stock("quartz_stock").reload(-15).register();
+        stock("quartz_stock").reload(-6).register();
         stock("padded_stock").aimSpeed(1.5F).stability(30).register();
-        stock("amethyst_stock").velocity(0.2F).reload(-5).aimSpeed(1.2F).register();
+        stock("amethyst_stock").velocity(0.2F).reload(-3).aimSpeed(1.2F).register();
         stock("emerald_stock").velocity(0.5F).magazine(2).register();
         stock("lapis_stock").ability(FRUGAL).register();
 

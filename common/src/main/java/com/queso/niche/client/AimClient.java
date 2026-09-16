@@ -6,6 +6,7 @@ import com.queso.niche.weapon.Aiming;
 import com.queso.niche.weapon.Augment;
 import com.queso.niche.weapon.ModularWeaponItem;
 import com.queso.niche.weapon.WeaponBuild;
+import net.minecraft.util.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.util.Mth;
@@ -26,26 +27,52 @@ public final class AimClient {
     private static final float RECOIL_KICK = 2.2F;
     private static final float RECOIL_RECOVER = 0.55F;
     private static final float MODEL_KICK_RECOVER = 0.4F;
+    private static final float MAX_RECOIL = 12.0F;
 
     private static float zoom = 0.0F;
     private static int aimStart = -1;
     private static float recoil = 0.0F;
     private static float modelKick = 0.0F;
+    private static long lastDecayMs = -1L;
 
     private AimClient() {}
 
     public static void addRecoil(float multiplier) {
+        decayKick();
         float scaled = multiplier * NicheConfig.recoilScale();
-        recoil -= RECOIL_KICK * scaled;
+        recoil = Math.max(-MAX_RECOIL, recoil - RECOIL_KICK * scaled);
         modelKick = Math.min(3.0F, modelKick + scaled);
     }
 
     public static float recoilPitch() {
+        decayKick();
         return recoil;
     }
 
     public static float modelKick() {
+        decayKick();
         return modelKick;
+    }
+
+    private static void decayKick() {
+        long now = Util.getMillis();
+        if (lastDecayMs < 0L) {
+            lastDecayMs = now;
+            return;
+        }
+        float dt = (now - lastDecayMs) / 50.0F;
+        lastDecayMs = now;
+        if (dt <= 0.0F) {
+            return;
+        }
+        recoil *= (float) Math.pow(1.0F - RECOIL_RECOVER, dt);
+        modelKick *= (float) Math.pow(1.0F - MODEL_KICK_RECOVER, dt);
+        if (Math.abs(recoil) < 0.01F) {
+            recoil = 0.0F;
+        }
+        if (modelKick < 0.01F) {
+            modelKick = 0.0F;
+        }
     }
 
     public static float readiness() {
@@ -146,8 +173,6 @@ public final class AimClient {
         }
 
         float dt = mc.getDeltaTracker().getRealtimeDeltaTicks();
-        recoil += (0.0F - recoil) * Mth.clamp(RECOIL_RECOVER * dt, 0.0F, 1.0F);
-        modelKick += (0.0F - modelKick) * Mth.clamp(MODEL_KICK_RECOVER * dt, 0.0F, 1.0F);
         float approach = aiming ? zoomInApproach(player) : ZOOM_APPROACH;
         float alpha = Mth.clamp(approach * dt, 0.0F, 1.0F);
         zoom += ((aiming ? 1.0F : 0.0F) - zoom) * alpha;
